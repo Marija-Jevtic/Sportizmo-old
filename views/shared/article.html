@@ -1,0 +1,35 @@
+<article class="article article-size-{{ itemsRowSize }}">
+    <a href="/detail">
+        <div class="img-holder">
+            {% if imgUrl %}
+                <img src="{{ imgUrl }}" alt="">
+            {% else %}
+                <img alt="" src="http://via.placeholder.com/180x220.jpg">
+            {% endif %}
+        </div>
+       
+        <h3 class="product-name">{{ result.marka }} {{ result.kategorija }}</h3>
+        <div class="more-about">{{ result.model }}</div>
+    </a>
+
+    <div class="price-wrapper">
+        <strong class="price">{{ result.cena }}
+            <abbr class="currency red" title="Srpska valuta">din.</abbr>
+        </strong>
+        <s class="old-price">17.190</s>
+    </div>
+
+    {% if pageType !== "detail" %}
+        <span class="sizes">36, 37, 38, 39</span>
+    {% endif %}
+
+    {% if pageType === "favourite" %}
+        <span class="close"></span>
+    {% else %}
+        <span class="favourite"></span>
+    {% endif %}
+
+    {% if result.popust and pageType !== "detail" %}
+        <strong class="discount">-{{ result.popust}} %</strong>
+    {% endif %}
+</article>

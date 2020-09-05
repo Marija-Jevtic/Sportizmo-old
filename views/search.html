@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "shared/header.html" %}
+
+{% include "shared/breadcrumbs.html" %}
+
+<div class="container">
+    {% include "shared/filter.html" %}
+
+    <div class="main-content">
+
+        {% include "home/products-mob.html" %}
+
+        <section class="main-article-content">
+            <div class="search-heading">
+                {% include "shared/search-heading.html" %}
+
+                {% include "shared/search-heading-links.html" %}
+
+                {% include "shared/results-selection.html" %}
+
+                {% include "shared/pagination.html" %}
+            </div>
+
+            <div class="article-container">
+                <div class="article-wrapper">
+                    {% set imgUrl = "https://www.sportizmo.rs/slike/47909/ironi-zenske-haljine-haljina-hardal-1-245x330.jpg" %}
+
+                    {% for result in results %}
+                        {% include "shared/article.html" %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <hr class="divided">
+
+            {% include "shared/pagination.html" %}
+
+            <p class="search-description">
+                Pogledajte celokupan Converse All Star katalog na našem sajtu gde možete pronaći Converse patike, Converse majce, jakne, Converse cizme, dukseve i još mnogo toga. Svakako najpopularnije Converse All Star Chuk Taylor možete naći u raznim bojama i veličinama. Ukoliko su Vam potrebne i starke za decu na pravom ste mestu jer ovde možete kompletirati Vašu porodičnu kupovinu Converse All Star patika. Naš najveći dobavljač je Converse Srbija od koga direktno dobavljamo robu koju dostavljamo Vama u roku od 24 sata. Jednoostavno i samo u 3 koraka poručite online i očekujte Vašu porudžbinu na vratima za 1 dan.
+            </p>
+
+            {% include "shared/search-input.html" %}
+        </section>
+    </div>
+
+    {% include "shared/search-form.html" %}
+    {% include "shared/policy.html" %}
+</div>
+{% include "shared/visited.html" %}
+{% include "shared/footer.html" %}
+
+{% endblock %}

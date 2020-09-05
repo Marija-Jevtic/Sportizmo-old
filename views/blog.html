@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "shared/header.html" %}
+
+{% include "shared/breadcrumbs.html" %}
+
+<div class="container">
+    <div class="blog-wrapper">
+
+        <div class="blog-left-wrapper">
+            {% include 'blog/' + pageType + '.html' %}
+        </div>
+        
+        <div class="blog-right-wrapper">
+            <div class="blog-sidebar-title">Poslednje objave</div>
+    
+            <ul class="latest-posts">
+                <li>
+                    <a href="/blog-article">
+                        <span class="">
+                            <img alt="" src="https://www.sportizmo.rs/teme/sportizmoHTML5/php/prikaz-slike.php?src=/media/slike/sportizmo-uvodi-sestocasovno-radno-vreme.jpg&h=75&w=75&zc=1">
+                        </span>
+                        <h3>Спортизмо уводи видео са обућом која иде 360°</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog-article">
+                        <span class="">
+                            <img alt="" src="https://www.sportizmo.rs/teme/sportizmoHTML5/php/prikaz-slike.php?src=/media/blog/364/360.jpg&h=75&w=75&zc=1">
+                        </span>
+                        <h3>Спортизмо уводи видео са обућом која иде 360°</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog-article">
+                       <span class="">
+                            <img alt="" src="https://www.sportizmo.rs/teme/sportizmoHTML5/php/prikaz-slike.php?src=/media/blog/364/360.jpg&h=75&w=75&zc=1">
+                        </span>
+                        <h3>Спортизмо уводи видео са обућом која иде 360°</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog-article">
+                       <span class="">
+                            <img alt="" src="https://www.sportizmo.rs/teme/sportizmoHTML5/php/prikaz-slike.php?src=/media/blog/364/360.jpg&h=75&w=75&zc=1">
+                        </span>
+                        <h3>Спортизмо уводи видео са обућом која иде 360°</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog-article">
+                        <span class="">
+                            <img alt="" src="https://www.sportizmo.rs/teme/sportizmoHTML5/php/prikaz-slike.php?src=/media/blog/364/360.jpg&h=75&w=75&zc=1">
+                        </span>
+                        <h3>Спортизмо уводи видео са обућом која иде 360°</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog-article">
+                       <span class="">
+                            <img alt="" src="https://www.sportizmo.rs/teme/sportizmoHTML5/php/prikaz-slike.php?src=/media/blog/364/360.jpg&h=75&w=75&zc=1">
+                        </span>
+                        <h3>Спортизмо уводи видео са обућом која иде 360°</h3>
+                    </a>
+                </li>
+            </ul>
+    
+            <div class="blog-sidebar-title">Pratite nas :)</div>
+            <p class="ilike">
+                <img src="https://www.sportizmo.rs/teme/sportizmoHTML5/img/ilike.gif" alt="Like this?!">
+            </p>
+        </div>
+    </div>
+    {% include "shared/search-form.html" %}
+    
+    {% include "shared/policy.html" %}
+
+</div>
+
+{% include "shared/footer.html" %}
+
+{% endblock %}

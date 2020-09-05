@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "shared/header.html" %}
+
+<div class="container">
+    {% include "shared/filter.html" %}
+
+    <div class="main-content">
+
+        {% include "home/products-mob.html" %}
+
+        {% include "home/slide-banners.html" %}
+
+        <div class="main-article-content">
+            <section class="article-container">
+                <h2 class="category">
+                    <a href="/search" title="Patike"><span>Majce</span><em>Pogledaj sve (510)</em></a>
+                </h2>
+
+                <div class="article-wrapper">
+                    {% set imgUrl = "https://www.sportizmo.rs/slike/45399/converse-zenske-majice-majica-chuck-patch-metallic-women-1-180x220.jpg" %}
+
+                    {% for result in results %}
+                        {% include "shared/article.html" %}
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="article-container">
+                <h2 class="category">
+                    <a href="/search" title="Patike"><span>Patike</span><em>Pogledaj sve (510)</em></a>
+                </h2>
+
+                <div class="article-wrapper">
+                    {% set imgUrl = "https://www.sportizmo.rs/slike/46231/nike-muske-patike-air-max-prime-men-2-180x220.jpg" %}
+
+                    {% for result in results %}
+                        {% include "shared/article.html" %}
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </div>
+
+    {% include "shared/policy.html" %}
+
+</div>
+
+{% include "shared/visited.html" %}
+{% include "shared/search-form.html" %}
+{% include "shared/footer.html" %}
+
+{% endblock %}

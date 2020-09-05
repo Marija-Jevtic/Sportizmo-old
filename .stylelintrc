@@ -1,0 +1,8 @@
+{
+  "!!! DOCUMENTATION !!!": "https://stylelint.io/user-guide/rules/at-rule-blacklist",
+  "extends": "stylelint-config-recommended",
+  "rules": {
+    "no-descending-specificity": null,
+    "font-family-no-missing-generic-family-keyword": null
+  }
+}

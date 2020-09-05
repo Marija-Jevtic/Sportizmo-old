@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "shared/header.html" %}
+
+<div class="container">
+
+	<section class="instructions-wrapper">
+		{% include "how-to-buy/how-to-buy-links.html" %}
+
+		<div class="content-wrapper">
+
+			<h1 class="titleH1">Omiljeno</h1>
+			<div class="empty-favourite">Još uvek niste ništa označili da vam se sviđa.</div>
+			<form id="favourite-form" action="" method="">
+				<input class="favourite-form-email" type="email" name="email" placeholder="@ Zapamti ovu listu i pošalji sebi na mejl">
+				<input class="favourite-form-btn" type="submit" value="Pošalji">
+			</form>
+
+		</div>
+
+		<div class="main-article-content">
+            <div class="article-container">
+                <div class="article-wrapper">
+                    {% set imgUrl = "https://www.sportizmo.rs/slike/58533/aku-muske-cizme-ns-546-spider-men-2-180x220.jpg" %}
+
+                    {% for result in results %}
+                        {% include "shared/article.html" %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+	</section>
+	{% include "shared/search-form.html" %}
+	{% include "shared/policy.html" %}
+</div>
+
+{% include "shared/visited.html" %}
+{% include "shared/footer.html" %}
+
+{% endblock %}
+
+
+
+

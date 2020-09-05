@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "shared/header.html" %}
+
+{% include "shared/breadcrumbs.html" %}
+
+<div class="container">
+    <section class="detail-wrapper">
+
+        <div class="product-header">
+            <a class="category-link" href="/search">← Dečije Patike</a>
+
+            <div class="product-title-wrapper">
+                <h1>
+                    <a href="/search">Adidas</a> PATIKE
+                    <strong>Tan Tarry Men</strong>
+                </h1>
+                <div class="product-code">Šifra: <strong>52329</strong></div>
+            </div>
+
+            <div class="product-price">
+                <strong class="price">5.790<abbr class="currency" title="Srpska valuta">din.</abbr></strong>
+                <p class="old-price">
+                    <span>Stara cena:</span><s class="old-price color-none">4190</s>
+                </p>
+            </div>
+            <p class="price-notice">+ 200 dinara isporuka.</p>
+        </div>
+
+        <div class="gallery-wrapper" >
+            {% include "detail/gallery.html" %}
+
+            <p class="to-zoom">klikni na sliku za uvećanje</p>
+            <div class="product-code">Šifra: <strong>52329</strong></div>
+
+            <div class="description">
+                <p><strong>Converse Chuck 70 Hi</strong> su  vodonepropusne plitke muške cipele, veoma modernog dizajna, namenjene planinarenju. Idalne za zimske i jesenje vremenske uslove. Poseduju “Quick lace” pertle za brzo vezivanje i odvezivanje jednim potezom. </p>
+                <p>- materijal: ''Gore-Tex'' vodonepropusna membrana</p>
+                <p>- boja: crna, zelena</p>
+                <p>- uložak: ''Eva'' antibakterijska mekana pena, sprečava pojavu neprijatnih mirisa</p>
+                <p>- srednji đon: "Responsive Boost" jedinstvena pena, lagana, elastična, koja je sačinjena od nekoliko hiljada energetskih kapsula, koje obezbeđuju najveći povrat energije, vrhunsku udobnost i apsorciju udara o tlo</p>
+                <p>- gazeći deo đona: "TRAXION™" čvrsta guma sa specijalnim "Terrex" žljebovima, obezbeđuje odlično prijanjanje i fleksibilno</p>
+                <p>Pogledajte sve<a href="/search">starke patike</a></p>
+                <p>Pogledajte sve<a href="/search">Converse patike</a></p>
+            </div>
+
+            <div class="similar-numbers">
+                <p class="similar-article">Artikal u drugim bojama:</p>
+                <a href="/search">
+                    <img alt="" src="https://via.placeholder.com/220x145.jpg">
+                </a>
+            </div>
+        </div>
+
+        <div class="detail-order-wrapper">
+            {% include "detail/order.html" %}
+        </div>
+    
+        {% include "shared/soc-gray.html" %}
+
+        <section class="product-bottom">
+            <div class="related">
+                <h4>Mozda vam se svidi</h4>
+                {% set imgUrl = "https://www.sportizmo.rs/slike/44875/natasa-zupac-zenske-haljine-prom-queen-1-110x75.jpg" %}
+                <div class="article-wrapper">
+                    {% for result in results %}
+                        {% include "shared/article.html" %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="reviews">
+                <h4>Komentari i ocene kupaca</h4>
+                <div class="form-wrapper">
+                    <div class="leave-comment">Napiši komentar</div>
+                    <form action="#" method="post">
+                        <input placeholder="Vaše ime" name="ime" type="text" value="">
+                        <input placeholder="Vaša mejl adresa" name="mejl" type="text" value="">
+                        <textarea placeholder="Vaš komentar" name="komentar"></textarea>
+
+                        <strong>*</strong> Ocena
+                        <div class="stars">
+                            <img src="img/star.png" alt="1" title="bad">
+                            <img src="img/star.png" alt="2" title="poor">
+                            <img src="img/star.png" alt="3" title="regular">
+                            <img src="img/star.png" alt="4" title="good">
+                            <img src="img/star.png" alt="5" title="gorgeous">
+                        </div>
+
+                        <button name="dugme" type="submit">Pošalji</button>
+
+                        <div class="thank-you-message">Hvala na komentaru. Ostalo je još samo da ga urednik pogleda :)</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+    {% include "shared/search-form.html" %}
+
+    {% include "shared/policy.html" %}
+</div>
+
+{% include "shared/visited.html" %}
+{% include "shared/footer.html" %}
+
+{% endblock %}

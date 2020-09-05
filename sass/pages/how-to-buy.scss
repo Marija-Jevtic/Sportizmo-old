@@ -1,0 +1,336 @@
+
+
+.titleH1 {
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 10px;
+    line-height: 1;
+    font-size: 28px;
+}
+
+.how-to-buy-img {
+    display: none;
+}
+
+.bigger-marg-bottom {
+    margin: 20px 10px 56px 10px;
+}
+
+.instructions-wrapper {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.how-to,
+.contact-instructions,
+.company-info {
+    font: 12px/19px arial;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.telephone-img,
+.mail-img,
+.direct-message-img,
+.question-img {
+    background: none;
+}
+
+.paragraph-container li img,
+.how-to img {
+    display: none;
+}
+
+.subtitle {
+    margin: 0.83em 0;
+}
+
+.instructions-wrapper ol {
+    font: 12px/23px arial;
+}
+
+.contact-links {
+    margin: 12px 0px;
+    border-top: 1px solid #d5d5d5;
+    border-left: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+    order: 2;
+}
+
+.contact-links a {
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 0px 10px 10px;
+    border-bottom: 1px solid #d5d5d5;
+    text-decoration: none;
+    color: #12518B;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
+
+.contact-links a.current,
+.contact-links a:hover {
+    color: #333;
+}
+
+.contact-instructions {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.contact-instructions,
+.contact-header {
+    color: #333;
+}
+
+.contact-header {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.contact-instructions a {
+    color: #F4762A;
+    text-decoration: underline;
+}
+
+.contact-instructions:nth-of-type(3),
+.contact-instructions:nth-of-type(4) {
+    margin-bottom: 38px;
+}
+
+.col-center {
+    margin-bottom: 110px;
+}
+
+.aligned-right {
+    margin-bottom: 49px;
+}
+
+.contact-form-wrapper {
+    margin: 1em 0;
+    display: block;
+}
+
+.contact-form-wrapper span {
+    font-weight: bold;
+}
+
+.contact-form-wrapper:last-of-type {
+    margin: 1em 0 3em 0;
+}
+
+.contact-form-wrapper textarea {
+    height: 80px;
+}
+
+.contact-form-wrapper input {
+    padding: 10px 0px;
+}
+
+.contact-form-wrapper textarea:focus,
+.contact-form-wrapper input:focus {
+    border: 1px #333 solid;
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper textarea {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+}
+
+#kontakt .contact-button {
+    background: #1967b0;
+    color: #fff;
+    padding: 20px 0;
+    border: 1px solid #165b9c;
+    text-transform: uppercase;
+    margin-bottom: 66px;
+    width: 100%;
+}
+
+.no-margin {
+    font: bold 20px/26px arial;
+    border: none;
+    margin: 0;
+    color: #003F75;
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.not-default {
+    font-weight: normal;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.how-to p:nth-of-type(2) {
+    margin-top: 1em;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.img-container img {
+    margin-bottom: 1em;
+    max-width: 300px;
+    height: 300px;
+}
+
+.ol-wrapp {
+    margin-bottom: 38px;
+}
+
+.ol-header {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.ol-wrapp ol {
+    line-height: 18px;
+}
+
+.aligned-right td:first-of-type {
+    text-align: right;
+}
+
+@include respond(desktop) {
+    .titleH1 {
+        margin: 0px 0px 20px 0px;
+        padding: 20px 0px 10px 0px;
+        color: #12518B;
+        letter-spacing: 1px;
+        text-align: center;
+        border: none;
+        text-transform: uppercase;
+    }
+
+    .how-to-buy-img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    .contact-links {
+        float: left;
+        width: 210px;
+        margin-right: 15px;
+    }
+
+    .paragraph-container li img {
+        display: inline-block;
+        float: right;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .instructions-wrapper {
+        display: initial;
+        padding: 10px 10px 20px 0px;
+    }
+
+    .how-to img {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+    }
+
+    .how-to-img-wrapper {
+        margin: 0px 10px 0px 0px;
+    }
+
+    .how-to p {
+        color: #333;
+    }
+
+    .flexed p {
+        display: flex;
+    }
+
+    .subtitle {
+        font: bold 20px/33px arial;
+        border: none;
+        padding: 0;
+        margin: 0px 0px 14px 0px;
+    }
+
+    .how-to,
+    .instructions-wrapper ol {
+        font-size: 14px;
+        font-family: arial;
+        margin: 0px 0px 30px 0px;
+        line-height: 1.8;
+    }
+
+    .contact-instructions {
+        padding: 0 0 0 42px;
+    }
+
+    .telephone-img {
+        background: transparent url("../img/kontakt-telefon.png") scroll no-repeat top left;
+    }
+
+    .mail-img {
+        background: transparent url("../img/kontakt-mejl.png") scroll no-repeat top left;
+    }
+
+    .direct-message-img {
+        background: transparent url("../img/kontakt-cas.png") scroll no-repeat top left;
+    }
+
+    .question-img {
+        background: transparent url("../img/kontakt-pitanja.png") scroll no-repeat top left;
+    }
+
+    .contact-form-wrapper {
+        display: flex;
+    }
+
+    .contact-form-wrapper span {
+        color: #a90000;
+    }
+
+    .contact-form-wrapper label {
+        text-align: right;
+        padding: 5px 10px 5px 0px;
+        flex-basis: 130px;
+    }
+
+    .contact-form-wrapper input {
+        padding: 5px;
+        width: 260px;
+    }
+
+    .contact-form-wrapper textarea {
+        height: 150px;
+        width: 360px;
+    }
+
+    #kontakt .contact-button {
+        margin: 0 130px 20px;
+        padding: 6px 15px;
+        border-radius: 6px 6px 6px 6px;
+        width: initial;
+    }
+
+    .contact-instructions a {
+        text-decoration: none;
+    }
+}
+

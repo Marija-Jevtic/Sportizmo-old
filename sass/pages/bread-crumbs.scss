@@ -1,0 +1,40 @@
+.bread-crumbs {
+    display: none;
+}
+
+@include respond(desktop) {
+    .bread-crumbs {
+        display: block;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 10px 0px 15px 15px;
+        color: #999;
+    }
+
+    .bread-crumbs a {
+        color: #333;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .bread-crumbs a:not(:first-child)::after {
+        content: "\003E";
+        color: #999;
+        margin: 0 3px 0 3px;
+        cursor: initial;
+        text-decoration: none;
+    }
+
+    .bread-crumbs a.back-to-search {
+        margin-right: 20px;
+        text-transform: uppercase;
+    }
+}
+
+@include respond(desk-bread-crumbs)  {
+    .bread-crumbs {
+        padding: 10px 0px 15px 0;
+    }
+}
+
+

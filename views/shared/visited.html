@@ -1,0 +1,13 @@
+<div class="visited">
+    <section class="visited-content">
+    	<h4 class="visited-link">Gledali ste (1)</h4>
+    	<div class="article-visited-wrapper">
+	        {% set imgUrl = "https://www.sportizmo.rs/slike/58580/adidas-zenske-cipele-terrex-eastrail-gtx-women-1-180x220.jpg" %}
+
+	        {% set itemsRowSize = 6 %}
+	        {% for result in results %}
+	            {% include "shared/article.html" %}
+	        {% endfor %}
+    	</div>
+    </section>
+</div>

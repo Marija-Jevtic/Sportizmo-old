@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "shared/header.html" %}
+
+<div class="container">
+
+	<div class="instructions-wrapper">
+		{% include "how-to-buy/how-to-buy-links.html" %}
+
+		{% include 'how-to-buy/' + pageType + '.html' %}
+	</div>
+	{% include "shared/search-form.html" %}
+	{% include "shared/policy.html" %}
+</div>
+
+{% include "shared/footer.html" %}
+
+{% endblock %}
+
+
+
+

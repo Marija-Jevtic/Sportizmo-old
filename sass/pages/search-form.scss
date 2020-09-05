@@ -1,0 +1,91 @@
+#searchbox-form {
+    position: relative;
+    padding: 7px 36px 7px 10px;
+    background: #f9f9f9;
+}
+
+.shared-style .searchbox-input {
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 3px 1% 3px 1%;
+}
+
+.shared-style .search-button {
+    position: absolute;
+    top: 24%;
+    right: 8px;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    background: transparent url("../img/lupa.png") no-repeat scroll center center;
+    border: none;
+    cursor: pointer;
+}
+
+.search-form-mob {
+    padding: 10px 30px;
+    margin: 10px 0px 48px 0px;
+}
+
+.search-form-mob select {
+    width: 100%;
+    line-height: 32px;
+    font-size: 15px;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    padding: 5px 10px;
+}
+
+.search-form-mob .select-header {
+    background-color: #f1f1f1;
+    padding: 8px 0px;
+    margin: 0px 0px 10px 0px;
+    color: #000;
+}
+
+.select-header {
+    padding: 8px 0;
+    margin-bottom: 10px;
+    background: #333;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #fff;
+}
+
+form.searchbox-form {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 7px 36px 7px 10px;
+    background: #f9f9f9;
+    margin: 35px 0;
+}
+
+.searchbox-form .searchbox-input {
+    border: 1px solid #ccc;
+    font-size: 17px;
+    padding: 5px 1% 5px 1%;
+}
+
+@include respond(desktop) {
+    .search-form-mob {
+        display: none;
+    }
+
+    .select-header {
+        display: none;
+    }
+
+    #form .check label {
+        float: none;
+        width: inherit;
+    }
+
+    form.searchbox-form {
+        display: none;
+    }
+}
+
+

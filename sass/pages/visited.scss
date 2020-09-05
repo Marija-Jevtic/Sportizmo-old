@@ -1,0 +1,58 @@
+.visited {
+    display: none;
+}
+
+@include respond(desktop) {
+    .visited {
+        width: 100%;
+        border-top: 5px solid #f1f1f1;
+        margin-bottom: 50px;
+        display: block;
+        margin-top: 30px;
+    }
+
+    .visited-content {
+        max-width: 1020px;
+        margin: 0 auto;
+        width: 100%;
+        margin-top: -17px;
+    }
+
+    .article-visited-wrapper {
+        display: flex;
+    }
+
+    .visited-link {
+        background: #f1f1f1;
+        height: 28px;
+        line-height: 28px;
+        display: inline-block;
+        padding: 0 10px;
+        text-transform: uppercase;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .visited-link:hover {
+        color: #a90000;
+    }
+
+    .visited-content .article-size-6 {
+        width: 16.6666666667%;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .visited-content .img-holder {
+        height: 148px;
+        margin: 0 auto;
+    }
+
+    .visited-content .article-size-6 img {
+        max-width: 120px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+

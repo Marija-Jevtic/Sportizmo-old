@@ -1,0 +1,147 @@
+.pagination-wrapper {
+    position: relative;
+    margin: 25px 0;
+    align-items: center;
+}
+
+.pagination-results {
+    display: none;
+}
+
+ul.pagination li {
+    float: left;
+    margin: 0px 8px 0px 0px;
+}
+
+ul.pagination a {
+    min-width: 30px;
+    line-height: 30px;
+    height: 30px;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+ul.pagination li.dots {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ul.pagination a.current {
+    color: #D30222;
+    border: 1px solid #D30222;
+    background: #FFF5F6;
+    cursor: default;
+}
+
+ul.pagination a.next,
+ul.pagination a.prev {
+    display: block;
+    position: absolute;
+    top: 3px;
+    text-align: center;
+    background: #1D6BB5;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+ul.pagination a.next {
+    right: 0;
+}
+
+ul.pagination a.prev {
+    left: 0;
+}
+
+ul.pagination li a,
+ul.pagination li.dots {
+    display: none;
+}
+
+ul.pagination li a.last {
+    display: block;
+}
+
+.results strong {
+    margin: 0 5px;
+}
+
+.results a.all-results {
+    color: #999;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 6px;
+    display: inline-block;
+    margin: 0 11px;
+}
+
+.results a.next {
+    display: block;
+    margin: -8px 0 0 0;
+    padding: 6px 11px;
+    background: #1D6BB5;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+    float: right;
+    cursor: pointer;
+}
+
+@include respond(desktop) {
+    .pagination-wrapper {
+        margin: 25px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pagination-results span {
+        font-weight: bold;
+        margin: 0 5px;
+    }
+
+    .pagination-results,
+    .pagination {
+        display: inline-block;
+    }
+
+    .pagination {
+        float: right;
+    }
+
+    ul.pagination a.next,
+    ul.pagination a.prev {
+        font-size: 0;
+        position: initial;
+        text-align: center;
+        border-radius: 0;
+    }
+
+    ul.pagination a.prev {
+        background: url("../img/first.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    ul.pagination a.next {
+        background: url("../img/last.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    ul.pagination li a,
+    ul.pagination li.dots {
+        display: block;
+    }
+}
+
+

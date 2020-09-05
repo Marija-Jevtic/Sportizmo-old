@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "shared/header.html" %}
+
+{% include "shared/breadcrumbs.html" %}
+
+{% include "shared/sale-filters.html" %}
+
+<div class="container">
+
+	{% include "shared/filter.html" %}
+
+    <section class="main-content">
+
+        {% include "home/products-mob.html" %}
+
+        <div class="main-article-content">
+            {% include "shared/search-heading.html" %}
+
+            <div class="article-container">
+                <div class="article-wrapper">
+                    {% set imgUrl = "https://www.sportizmo.rs/slike/58533/aku-muske-cizme-ns-546-spider-men-2-180x220.jpg" %}
+
+                    {% set itemsRowSize = 4 %}
+                    {% for result in results %}
+                        {% include "shared/article.html" %}
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    {% include "shared/search-form.html" %}
+    {% include "shared/policy.html" %}
+</div>
+
+{% include "shared/visited.html" %}
+{% include "shared/footer.html" %}
+
+{% endblock %}

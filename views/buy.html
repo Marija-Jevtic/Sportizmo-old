@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "shared/header.html" %}
+
+{% include "shared/breadcrumbs.html" %}
+
+<div class="container flexed-column">
+    <div class="busket-container">
+        <div class="empty-busket">U vašoj korpi trenutno nema artikala. Dodajte artikle u korpu kako bi započeli kupovinu.<a href="/how-to-buy" title="Kako kupiti"> Kako kupiti?</a></div>
+
+        <div class="feilure">Molimo vas popunite sva polja ispravno kako bi mogli da obradimo vašu narudžbinu.</div>
+
+        <div class="back-to-shop-wrapper">
+            <a class="back-to-shop" href="/search" title="Nazad u kupovinu">« Nazad u kupovinu</a>
+        </div>
+
+        <section>
+            <h2 class="form-heading centred">1. Vaša korpa</h2>
+
+            <form action="" method="">
+                <div class="column-labels">
+                    <div class="product-description">
+                        <label class="product-image-heading">Slika</label>
+                        <label class="product-details-heading">Artikal</label>
+                    </div>
+                    <div class="row-reverse-wrapper">
+                        <label class="product-buy-price-heading">Cena</label>
+                        <label class="product-buy-number-heading">Broj</label>
+                    </div>
+                    <label class="product-quantity-heading">Količina</label>
+                    <label class="product-price-heading">Ukupno</label>
+                    <label class="product-removal-heading">Izbaci</label>
+                </div>
+
+                <div class="product">
+                    <a href="/detail" class="product-description">
+                        <div class="product-image">
+                           <img src="https://via.placeholder.com/180x220" alt="">
+                        </div>
+
+                        <div class="product-details">ADIDAS PATIKE Terrex TraceRocker Trail Running Men</div>
+                    </a>
+                    
+                    <div class="row-reverse-wrapper">
+                        <div class="product-buy-price">
+                            <div class="flexed-price">5000 din.</div>
+                        </div>
+
+                        <div class="product-buy-number">
+                            <select name="">
+                                <option value="41 1/3">41 1/3</option>
+                                <option value="41">41</option>
+                                <option value="41">41</option>
+                            </select><br>
+                            <input type="submit" class="save" name="" value="SNIMI">
+                        </div>
+                    </div>
+
+                    <div class="product-quantity">
+                        <input type="number" class="quantity-number" name="" value="1"><br>
+                        <input type="submit" class="save" name="" value="SNIMI">
+                    </div>
+
+                     <div class="product-line-price">5000 din.</div>
+
+                    <div class="product-removal">
+                        <a class="remove-product" href="/buy">Izbaci</a>
+                    </div>
+                </div>
+
+               <div class="product">
+                   <a href="/detail" class="product-description">
+                        <div class="product-image">
+                           <img src="https://via.placeholder.com/180x220" alt="">
+                        </div>
+
+                        <div class="product-details">ADIDAS PATIKE Terrex TraceRocker Trail Running Men</div>
+                    </a>
+                    
+                    <div class="row-reverse-wrapper">
+                        <div class="product-buy-price"><div class="flexed-price">15.000 din.</div></div>
+
+                        <div class="product-buy-number">
+                            <select name="">
+                                <option value="41 1/3">41 1/3</option>
+                                <option value="41">41</option>
+                                <option value="41">41</option>
+                            </select><br>
+                            <input type="submit" class="save" name="" value="SNIMI">
+                        </div>
+                    </div>
+
+                    <div class="product-quantity">
+                        <input type="text" class="quantity-number" name="" value="1"><br>
+                        <input type="submit" class="save" name="" value="SNIMI">
+                    </div>
+
+                     <div class="product-line-price">5000 din.</div>
+
+                    <div class="product-removal">
+                        <a class="remove-product" href="/buy">Izbaci</a>
+                    </div>
+                </div>
+            </form>
+            <div class="total-wrapper">
+                <div class="note">
+                    <strong>Napomena: </strong> U ukupnu cenu će biti obračunat i iznos poštarine.
+                </div>
+                <div class="total-price">20.000 din.</div>
+            </div>
+        </section>
+
+        <section class="form-wrapper">
+            <h2 class="form-heading centred">
+                2. Ostavite vaše podatke
+            </h2>
+
+            <form id="form" action="" method="" class="">
+                <div>
+                    <label for="ime">Ime i prezime:</label>
+                    <input type="text" id="ime" name="ime" class="text error">
+                </div>
+
+                <div>
+                    <label for="mejl">E-mail adresa:</label>
+                    <input type="text" id="mejl" name="mejl" class="text">
+                </div>
+
+                <div>
+                    <label for="telefon">Telefon:</label>
+                    <input type="number" id="telefon" name="telefon" class="text">
+                </div>
+
+                <div>
+                    <label for="adresa">Adresa:</label>
+                    <input type="text" id="adresa" name="adresa" class="text">
+                </div>
+
+                <div>
+                    <label for="grad">Poštanski broj i mesto:</label>
+                    <input type="text" id="grad" name="grad" class="text">
+                </div>
+
+                <div>
+                    <label for="komentar">Imate li poruku:</label>
+                    <textarea name="komentar" id="komentar" class="text"></textarea>
+                </div>
+
+                <div class="order-wrapper">
+                    <input type="submit" value="NARUČI" class="order-button" name="dugme">
+                     <a href="/buy">Nazad u korpu</a>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="offers" name="mejl_lista" value="1" checked="">
+                    <label for="offers">Obaveštavaj me o super popustima i ponudama</label>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    {% include "shared/search-form.html" %}
+    {% include "shared/policy.html" %}
+</div>
+{% include "shared/footer.html" %}
+
+{% endblock %}
+
+
+
+

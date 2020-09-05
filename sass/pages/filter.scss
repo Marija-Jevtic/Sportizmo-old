@@ -1,0 +1,525 @@
+.filter-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.filter-box {
+    width: 96%;
+    padding: 15px 0;
+    cursor: pointer;
+    background: #1d6bb5;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.filter-box span {
+    display: none;
+}
+
+.filter-heading {
+    background: transparent url(../img/division-bg.png) repeat-x scroll center left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+    padding: 2px 0px 2px 10px;
+    line-height: normal;
+}
+
+.filter-heading strong {
+    padding: 0 7px;
+    color: #eee;
+    font-size: 12px;
+    background-color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container .filter-content {
+    overflow: auto;
+    height: 100%;
+    background: #222;
+    position: fixed;
+    left: -800px;
+    top: 0;
+    z-index: 3;
+}
+
+.hidden-filter:checked ~ .filter-content {
+    width: 288px;
+    left: 0;
+    transition: left 200ms ease;
+}
+
+.hidden-filter:checked ~ .overlay {
+    display: block;
+    background: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.hidden-filter:checked ~ .close-filter {
+    background: url('../img/close-white.png');
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 4;
+    width: 33px;
+    height: 30px;
+    background-size: 45%;
+    background-position: center;
+}
+
+#search-menu {
+    padding: 0 10px 10px 10px;
+}
+
+.select-wrapp {
+    background: #fff;
+    position: relative;
+    margin-bottom: 5px;
+
+    &:after {
+        content: ' \25BE ';
+        position: absolute;
+        top: 0;
+        right: 10px;
+        line-height: 28px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 15px;
+    }
+
+    select {
+        @include filter-select;
+        padding: 0 0 0 8px;
+        font-size: 12px;
+        height: 28px;
+        line-height: 28px;
+        width: 100%;
+    }
+}
+
+.select-price {
+    background: #fff;
+    position: relative;
+
+    &:after {
+        content: ' \25BE ';
+        position: absolute;
+        top: 0;
+        right: 10px;
+        line-height: 28px;
+    }
+
+    select {
+        @include filter-select;
+        padding: 0;
+        font-size: 14px;
+        color: #333;
+        border: 1px solid #999;
+        width: 4.5em;
+        height: 2em;
+        line-height: 2em;
+        border: none;
+        padding: 0 0 0 5px;
+    }
+}
+
+.filter-division {
+    padding: 0 10px 25px 10px;
+}
+
+.filter-product-list li {
+    padding: 14px 0 10px 10px;
+    border-bottom: 1px solid #777;
+}
+
+.filter-product-list li:last-child, .filter-sprite li:last-child {
+    border-bottom: none;
+}
+
+.filter-product-list li a, .filter-sprite li a {
+    display: block;
+    color: #eee;
+}
+
+.filter-product-list li span {
+    background-image: url(../img/check-out-white.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+    width: 24px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.filter-product-list li a:hover, .filter-product-list li a.current {
+    background-image: url(../img/check-in-white.png);
+    background-repeat: no-repeat;
+}
+
+ul.filter-sprite a {
+    background: url(../img/iko-spriteV16.png) no-repeat top left;
+    padding-left: 30px;
+}
+
+ul.filter-sprite li a:hover {
+    color: #D30222;
+}
+
+.filter-sprite a.shoes {
+    background-position: 0 -513px;
+}
+
+.filter-sprite a.boots {
+    background-position: 0 -540px;
+}
+
+.filter-sprite a.snickers {
+    background-position: 0 -2347px;
+}
+
+.filter-sprite a.klompe {
+    background-position: 0 -1428px;
+}
+
+.filter-sprite a.juckets {
+    background-position: 0 -1152px;
+}
+
+.filter-sprite a.sale {
+    background-position: 0 -2408px;
+}
+
+.bestsellers {
+    display: none;
+}
+
+.sticky-close-holder {
+    position: sticky;
+    width: 100%;
+    background: #222;
+    height: 40px;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #999;
+}
+
+.price-filter label {
+    color: #eee;
+    margin-right: 8px;
+}
+
+.price-filter select,
+.price-btn {
+    cursor: pointer;
+}
+
+.price-form {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0;
+    margin: 10px 10px 10px 20px;
+}
+
+.price-btn {
+    height: 28px;
+    margin: -2px 0px 0px 0px;
+    border-radius: 5px;
+    background: #ECECEC url("../img/search.png") no-repeat scroll center center;
+    border: none;
+    cursor: pointer;
+}
+
+.numbers-filter {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.numbers-filter li a {
+    font-size: 14px;
+    text-align: center;
+    margin: 1px;
+    background: #fff;
+    color: #333;
+    border: 1px solid #999;
+    width: 35px;
+    padding: 6px 0;
+    display: block;
+}
+
+.numbers-filter li a:hover {
+    background: #d8d8d8;
+    color: #333;
+}
+
+.numbers-filter li a.active {
+    cursor: default;
+    background: #999;
+    color: #fff;
+}
+
+.clr-li {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.clr-li li {
+    float: left;
+}
+
+.clr-li a {
+    border: 1px solid #898989;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    margin: 0 3px 3px 0;
+}
+
+.bele {
+    background: #fff;
+}
+
+.crne {
+    background: #000;
+}
+
+.plave {
+    background: #247FFF;
+}
+
+.crvene {
+    background: #E01D1D;
+}
+
+.bordo {
+    background: #870C0C;
+}
+
+.zelene {
+    background: #289E00;
+}
+
+.zute {
+    background: #FFEF45;
+}
+
+.sive {
+    background: #888;
+}
+
+.roze {
+    background: #FF21D6;
+}
+
+.braon {
+    background: #5E3838;
+}
+
+.ljubicaste {
+    background: #A700C4;
+}
+
+.bez {
+    background: #FFF8DB;
+}
+
+.narandzaste {
+    background: #FF9C19;
+}
+
+.sarene {
+    background: transparent url("../img/sarene.png") repeat scroll top left;
+}
+
+@include respond(desktop) {
+    .filter-wrapper {
+        display: initial;
+    }
+
+    .sticky-close-holder {
+        display: none;
+    }
+
+    .container .filter-content {
+        width: 210px;
+        overflow: initial;
+        height: auto;
+        position: initial;
+        background: #fff;
+        padding-right: 10px;
+    }
+
+    .filter-box {
+        width: 200px;
+        color: #fff;
+        text-transform: uppercase;
+        display: flex;
+        align-self: initial;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        margin: 0;
+        font-size: 13px;
+        font-weight: bold;
+        background: #1967b0;
+        padding: 9px 0px;
+        line-height: 1;
+    }
+
+    .filter-box span {
+        display: block;
+        background: #d30222;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 4px;
+        margin-left: 5px;
+    }
+
+    #search-menu {
+        padding: 0;
+        margin: 20px 0 20px;
+    }
+
+    .filter-heading strong {
+        background: #fff;
+        color: #D30222;
+    }
+
+    ul.ordered-list-filter {
+        list-style: none;
+        counter-reset: li;
+    }
+
+    ul.ordered-list-filter li::before {
+        content: counter(li);
+        display: inline-block;
+        position: absolute;
+        top: 1.5em;
+        left: 0;
+        width: 1em;
+        font-size: 18px;
+        color: #999;
+    }
+
+    ul.ordered-list-filter li {
+        counter-increment: li;
+        position: relative;
+        border-bottom: 1px solid #eee;
+        margin: 0px 0px 6px 0px;
+        padding: 0px 0px 4px 0px;
+    }
+
+    ul.ordered-list-filter li:last-of-type {
+        border-bottom: none;
+    }
+
+    ul.ordered-list-filter li a {
+        text-align: center;
+        display: block;
+        color: #12518B;
+        font-size: 11px;
+    }
+
+    ul.ordered-list-filter span {
+        display: block;
+    }
+
+    ul.ordered-list-filter a img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .filter-heading {
+        width: 97.5%;
+    }
+
+    .filter-product-list li a, .filter-sprite li a {
+        color: #333;
+        font-size: 13px;
+        display: block;
+    }
+
+    .filter-sprite li {
+        padding: 8px 0 3px 0;
+    }
+
+    .filter-product-list li, .filter-sprite li {
+        border-bottom: 1px solid #eee;
+        padding: 8px 0 3px 0;
+    }
+
+    .filter-product-list li span {
+        background-image: url(../img/check-out-desk.png);
+        background-repeat: no-repeat;
+    }
+
+    .filter-product-list li a:hover, .filter-product-list li a.current {
+        background-image: url(../img/check-in-desk.png);
+        background-repeat: no-repeat;
+    }
+
+    .numbers-filter li a.active {
+        background: #333;
+    }
+
+    .numbers-filter {
+        justify-content: initial;
+    }
+
+    .price-filter label {
+        color: #333;
+    }
+
+    .clr-li {
+        padding: 0 0 0 10px;
+    }
+
+    .clr-li li a.active, .clr-li li a:hover {
+        border: 2px solid #44356C;
+    }
+
+    .filter-division {
+        padding: 0 10px;
+    }
+
+    .bestsellers {
+        display: block;
+    }
+
+    .price-btn {
+        padding: 6px 14px;
+    }
+}
+
+

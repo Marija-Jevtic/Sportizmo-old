@@ -1,0 +1,66 @@
+<div class="soc-icons-desktop">
+    <div class="wrapped">
+        <div class="delivery">
+            <span class="bold">Isporuka</span> na teritoriji cele<span class="bold"> Srbije</span> uključujući<span class="bold"> Kosovo i Metohiju</span>
+        </div>
+
+        <ul class="soc-icons-dsktp">
+            <li><a target="_blank" href="https://www.instagram.com/sportizmo" class="instagram-dsk teritoriji" title="Instagram" rel="noopener noreferrer"></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/sportizmo" class="facebook-dsk" rel="noopener noreferrer" title="Facebook"></a></li>
+            <li><a target="_blank" href="/blog-article" class="blog" rel="noopener noreferrer" title="Blog"></a></li>
+        </ul>
+    </div>
+</div>
+
+<strong class="worktime">Radno vreme kol centra do Ponedeljka 28.10. je 10:00-18:00</strong>
+
+<header class="header-wrapper">
+    <h1 hidden>Sportizmo - Online prodavnica</h1>
+    <div class="header-search-container">
+        <div class="header-search-content">
+            <a class="logo-wrapper" href="/home">
+                <img alt="Sportizmo.rs" class="logo" src="/img/logo.png">
+            </a>
+
+            <div class="search-wrapper">
+                <form class="search" action="" method="">
+                    <input type="text" class="search-input" name="pretraga" placeholder="Ovde ukucajte šta tražite..." autocomplete="off" maxlength="42" pattern="[A-Za-z]+">
+                    <input type="submit" class="search-btn" value="">
+                </form>
+            </div>
+
+            {% include "shared/header-icons-active.html" %}
+
+            <a class="buy-icon-link" href="/buy">
+                <img src="/img/korpa.png" alt="">
+            </a>
+        </div>
+
+        <input type="checkbox" id="search" class="hidden-checkbox hidden" autocomplete="off">
+        <label class="searchbox" for="search">
+            <img src="/img/lupa-pretraga.png" alt="Lupa">
+        </label>
+
+        <div class="searchbox-content">
+            <form id="searchbox-form" class="shared-style" action="/" method="">
+                <input type="text" name="pretraga" class="searchbox-input" value placeholder="Patike, cizme, jakne... pretraga...">
+                <input class="search-button" type="submit" value="">
+            </form>
+        </div>
+    </div>
+
+    <input type="checkbox" id="menu" class="main-nav hidden" autocomplete="off">
+    <label for="menu" class="hamburger close"></label>
+    <div class="overlay"></div>
+
+    <div class="nav-container">
+        
+        {% include "shared/navigation.html" %}
+        <nav class="separate-nav">
+            <ul>
+                <li><h4><a class="sale-li {% if pageType === "sale" %} current{% endif %}" href="/sale" title="Sniženje">Sniženje</a></h4></li>
+                <li><h4><a href="/how-to-buy" {% if pageType === "how-to-buy" %} class="current" title="Kako kupiti" {% endif %}>Kako kupiti</a></h4></li>
+            </ul>
+        </nav>
+    </div>
+</header>

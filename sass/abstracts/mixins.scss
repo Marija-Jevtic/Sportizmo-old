@@ -1,0 +1,43 @@
+@mixin respond($breakpoint) {
+	@if $breakpoint == article-size-3  {
+		@media (min-width: 625px) { @content };
+	}
+
+	@if $breakpoint == desktop {
+		@media (min-width: 768px) { @content };
+	}
+
+	@if $breakpoint == article-size-4 {
+		@media (min-width: 860px) { @content };
+	}
+
+	@if $breakpoint == desk-bread-crumbs {
+		@media (min-width: 1000px) { @content };
+	}
+}
+
+@mixin two-column-article {
+	width: 50%;
+    margin-bottom: 25px;
+}
+
+@mixin flex($flex-direction) {
+	display: flex;
+	flex-direction: $flex-direction;
+}
+
+@mixin full-width {
+	width: 100%;
+	height: auto;
+}
+
+@mixin filter-select {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #f1f1f1;
+}

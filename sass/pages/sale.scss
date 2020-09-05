@@ -1,0 +1,61 @@
+.sale-wrapper {
+    display: none;
+}
+
+@include respond(desktop) {
+    .sale-wrapper {
+        padding: 10px 20px;
+        text-align: center;
+        background: #f5454a;
+        color: #fff;
+        line-height: 28px;
+        overflow: auto;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: block;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .sale-wrapper strong {
+        display: block;
+        font-size: 24px;
+        margin: 0px 0px 20px 0px;
+    }
+
+    a.gender-category-sale {
+        width: 33.33%;
+    }
+
+    .sale-wrapper a {
+        display: block;
+        float: left;
+        color: #333;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin: 0px 0px 20px 0px;
+    }
+
+    .sale-wrapper span {
+        display: block;
+        border: 1px solid #333;
+        padding: 8px 0px;
+        background: #fff;
+        font-weight: bold;
+    }
+
+    .sale-wrapper a.in-procent {
+        width: 20%;
+        font-size: 18px;
+    }
+
+    .sale-wrapper a.current span,
+    .sale-wrapper a.gender-category-sale:hover span,
+    .sale-wrapper .in-procent:hover span {
+        background: #fff url("../img/okvir-naslova.png") scroll repeat-x top left;
+        color: #f5454a;
+    }
+}
+
+

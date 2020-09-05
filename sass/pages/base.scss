@@ -1,0 +1,155 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, picture {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a, abbr {
+    text-decoration: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+body {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: Arial, Helvetica, Utkal, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body .flexed-column {
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-article-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.underline {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text {
+    color: #999;
+}
+
+.follow {
+    margin-right: 10px;
+    color: #999;
+}
+
+.hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.h1 {
+    font-size: 16px;
+    color: #1d6bb5;
+    text-align: center;
+    background: #f1f1f1;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 5px 0px 5px 0px;
+}
+
+.main-article-content .divided {
+    border: 2px #f1f1f1 solid;
+    margin-bottom: 22px;
+    width: 100%;
+}
+
+@include respond(desktop) {
+    body {
+        color: #333;
+    }
+
+    .container {
+        max-width: 1020px;
+        margin: 0 auto;
+        flex-direction: row;
+        padding: 0 10px 0 10px;
+    }
+
+    .h1 {
+        text-align: center;
+        font-size: 26px;
+        padding: 10px 0px 11px 0px;
+        letter-spacing: 1px;
+        background: none;
+        border: none;
+        color: #333;
+    }
+
+    .main-article-content .divided {
+        display: none;
+    }
+
+    .main-content {
+        flex: 1 0 calc(100% - 210px);
+    }
+}

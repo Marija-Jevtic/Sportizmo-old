@@ -1,0 +1,46 @@
+
+#favourite-form {
+    margin-bottom: 36px;
+    display: flex;
+}
+
+#favourite-form input {
+    padding: 6px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background: #f1f1f1;
+    color: #333;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+#favourite-form input.favourite-form-email {
+    flex: 1;
+    margin-right: 4px;
+}
+
+#favourite-form .favourite-form-btn {
+    background: #ffc416;
+    border: 1px solid #E6AB00;
+    cursor: pointer;
+    color: #333;
+}
+
+#favourite-form .favourite-form-btn:hover {
+    background-color: #FFBE00;
+}
+
+.empty-favourite {
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+@include respond(desktop) {
+    #favourite-form input {
+        padding: 8px 12px 8px 12px;
+        font: 18px/18px Georgia !important;
+    }
+}
+
+

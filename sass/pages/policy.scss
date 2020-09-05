@@ -1,0 +1,35 @@
+.policy {
+    border-top: 1px dashed #777;
+    border-bottom: 1px dashed #777;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px 13px 30px;
+    align-items: center;
+}
+
+.policy ol li strong {
+    display: block;
+}
+
+.policy ol {
+    list-style-type: decimal;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.policy-header {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+@include respond(desktop) {
+    .policy {
+        display: none;
+    }
+}
+
+
