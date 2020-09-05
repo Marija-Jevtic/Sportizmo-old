@@ -112,6 +112,11 @@
         height: 28px;
         line-height: 28px;
         width: 100%;
+        background: #fff;
+
+        @include respond(desktop) {
+            background: #f1f1f1;
+        }
     }
 }
 
@@ -225,6 +230,7 @@ ul.filter-sprite li a:hover {
     text-transform: uppercase;
     font-weight: normal;
     color: #999;
+    z-index: 2;
 }
 
 .price-filter label {
@@ -252,6 +258,7 @@ ul.filter-sprite li a:hover {
     background: #ECECEC url("../img/search.png") no-repeat scroll center center;
     border: none;
     cursor: pointer;
+    padding: 6px 14px;
 }
 
 .numbers-filter {
@@ -515,10 +522,6 @@ ul.filter-sprite li a:hover {
 
     .bestsellers {
         display: block;
-    }
-
-    .price-btn {
-        padding: 6px 14px;
     }
 }
 
