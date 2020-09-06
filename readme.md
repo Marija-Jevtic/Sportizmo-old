@@ -48,7 +48,6 @@
         - pravila su definisana u .stylelintrc
 
    - validateHtml
-   - accessibility
    - findNotUsedCSS
    - build - pokrece 'styles', 'images', 'js'
    - watch - prati izmene na css i pokrece 'styles', 'cssLint'
